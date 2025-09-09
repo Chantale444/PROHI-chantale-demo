@@ -8,7 +8,7 @@ The collaborator will edit the line below in GitHub -->
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
 _Here you can include images, like the logo from SU_
-
+Am modifying line 11 since I want to have 2 comits for my work
 ![Your dashboard](./assets/project-logo.jpg)
 
 ## Introduction
