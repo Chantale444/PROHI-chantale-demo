@@ -1,59 +1,60 @@
+
 import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
 
+# ---------------- PAGE CONFIG ---------------- #
 st.set_page_config(
-    page_title="PROHI Dashboard",
-    page_icon="👋",
+    page_title="Student Mental Health Dashboard",
+    page_icon="📊",
+    layout="wide"
 )
 
-# Sidebar configuration
-st.sidebar.image("./assets/project-logo.jpg",)
-st.sidebar.success("Select a tab above.")
+# ---------------- SIDEBAR FILTERS ---------------- #
+st.sidebar.header("🎓 Student Mental Health Filters")
+semester = st.sidebar.selectbox("Select Semester", ["Spring", "Fall"])
+study_hours = st.sidebar.slider("Average Study Hours/Day", 0, 12, 6)
+stress_level = st.sidebar.radio("Self-Reported Stress Level", ["Low", "Medium", "High"])
 
-# # Page information
+# ---------------- SYNTHETIC DATA ---------------- #
+np.random.seed(42)
+students = [f"Student {i}" for i in range(1, 21)]
+cgpa = np.random.uniform(2.5, 4.0, size=20)          # Academic performance
+stress_scores = np.random.randint(1, 100, size=20)   # Stress levels
+sleep_hours = np.random.uniform(4, 9, size=20)       # Average sleep
 
-st.write("# Welcome to PROHI Dashboard! 👋")
+df = pd.DataFrame({
+    "Student": students,
+    "CGPA": cgpa.round(2),
+    "Stress Score": stress_scores,
+    "Sleep Hours": sleep_hours.round(1)
+})
 
-st.markdown(
-"""
-    ## Aims
+# ---------------- MAIN LAYOUT ---------------- #
+st.title("📊 Student Mental Health Dashboard")
+st.write("This dashboard uses **synthetic data** to demonstrate basic analytics for student wellness.")
 
-    After completing the course the student should be able to:
-    - explain basic project management methods
-    - be able to account for success factors in Health Informatics projects
-    - understand basic methods and tools in the field of data science and machine learning
-    - explain process models for data mining projects
-    - explain the difference between rule-based methods and machine learning methods
-    - apply basic project management methods
-    - work in an international multidisciplinary project group
-    - independently lead and implement a limited project in health informatics - document the steps in the design of a prototype for a health informatics project
-    - apply the steps in a process model for data mining projects
-    - apply methods from the field of text mining on different types of health informatics problems
-    - explain and argue for their positions regarding the implementation of a health informatics project
-    - explain how to work with sensitive health information in a safe and ethical way.
+# Data preview
+st.subheader("Student Data Preview")
+st.dataframe(df.head())
 
-"""
+# ---------------- CHARTS -----------
+
+# ---------------- CHARTS ---------------- #
+st.subheader("Stress Score Distribution")
+fig1 = px.bar(df, x="Student", y="Stress Score", title="Stress Scores by Student", color="Stress Score")
+st.plotly_chart(fig1, use_container_width=True)
+
+st.subheader("Sleep Hours vs CGPA")
+fig2 = px.scatter(
+    df, x="Sleep Hours", y="CGPA",
+    size="Stress Score", color="Stress Score",
+    hover_name="Student", title="Relationship Between Sleep Hours and CGPA"
 )
+st.plotly_chart(fig2, use_container_width=True)
 
-# You can also add text right into the web as long comments (""")
-"""
-The final project aims to apply data science concepts and skills on a 
-medical case study that you and your team select from a public data source.
-The project assumes that you bring the technical Python skills from 
-previous courses (*DSHI*: Data Science for Health Informatics), as well as 
-the analytical skills to argue how and why specific techniques could
-enhance the problem domain related to the selected dataset.
-"""
 
-### UNCOMMENT THE CODE BELOW TO SEE EXAMPLE OF INPUT WIDGETS
 
-# # DATAFRAME MANAGEMENT
-# import numpy as np
 
-# dataframe = np.random.randn(10, 20)
-# st.dataframe(dataframe)
 
-# # Add a slider to the sidebar:
-# add_slider = st.slider(
-#     'Select a range of values',
-#     0.0, 100.0, (25.0, 75.0)
-# )

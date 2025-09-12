@@ -5,54 +5,70 @@
 The collaborator will edit the line below in GitHub -->
 **Collaborator**: Anna Larsson
 
-_Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
-_Here you can include images, like the logo from SU_
 
-![Your dashboard](./assets/project-logo.jpg)
+# 📊 Student Mental Health Dashboard
 
-## Introduction
+This project is a **mini interactive web dashboard** built with **Streamlit** as part of the DSHI course.  
+It demonstrates a small-scale predictive analytics workflow using **synthetic data** to mimic student mental wellness information.  
 
-_This template project will contain a simple interactive web dashboard with Streamlit. Feel free to edit this document as desired_
+---
 
-## System description
+## ✨ Features  
+- **Two Pages**:  
+  - **Dashboard** – Displays synthetic student data, filters, and interactive charts.  
+  - **About** – Summarizes the project’s purpose and tools.  
+- **Interactive Filters**: Semester selector, average study hours slider, and self-reported stress level.  
+- **Visualizations**: Plotly bar chart for stress scores and additional data previews.  
+- **Data Table**: Shows a preview of synthetic student records.  
 
-### Installation of libraries
+---
 
-Run the commands below in a terminal to configure the project and install the package dependencies for the first time.
+## 🛠️ Tools and Libraries  
+- **Python 3.12**  
+- **Streamlit 1.46**  
+- **Plotly**  
+- **NumPy**  
+- **Pandas**  
 
-If you are using Mac, you may need to install Xcode. Check the official Streamlit documentation [here](https://docs.streamlit.io/get-started/installation/command-line#prerequisites).
+---
 
-1. Create the environment with `python -m venv env`
-2. Activate the virtual environment for Python
-   - [Linux/Mac] `source env/bin/activate` 
-   - [Windows command prompt] `.\env\Scripts\activate.bat` 
-   - [in Windows PowerShell] `.\env\Scripts\Activate.ps1`
-3. Make sure that your terminal is in the environment (`env`) not in the global Python installation. The terminal should start with the word `env`
-4. Install required packages `pip install -r ./requirements.txt`
-5. Check that the installation works running `streamlit hello`
-6. Stop the terminal by pressing **Ctrl+C**
+## 📊 Dataset Overview  
+The **Student Mental Health Dashboard** uses **synthetic data** to mimic realistic student wellness information.  
+The dataset contains **20 synthetic student records** with the following features:  
 
-### Execute custom Dashboard
+| Column          | Description                                                        | Example Values        |
+|-----------------|------------------------------------------------------------------|----------------------|
+| **Student**     | Synthetic identifier for each student (not real individuals).     | Student 1, Student 2 |
+| **CGPA**        | Randomly generated cumulative grade point average (2.5 – 4.0).    | 3.06, 3.93, 3.60     |
+| **Stress Score** | Random integer representing self-reported stress level (1 – 100).| 59, 42, 92           |
+| **Sleep Hours**  | Average sleep hours per day (random float between 4 – 9).        | 8.7, 5.5, 4.5        |
 
-First, make sure that you are running Python from the environment. Check the steps 2 and 3 above. Then, to run the custom dashboard execute the following command:
+### 🔎 Insights Demonstrated
+- **Stress Score Distribution**: A Plotly bar chart visualizes the variation in student stress scores.  
+- **Sleep Hours vs CGPA**: Shows potential relationships between academic performance and sleep.  
+- **Filters**: Sidebar widgets let you explore subsets of data interactively.  
 
-```
-> streamlit run Dashboard.py
-# If the command above fails, use:
-> python -m streamlit run Dashboard.py
-```
+> 🧪 **Note**: This dataset is **synthetic**—created with NumPy for demonstration purposes. It does not represent real student data.
 
-### Dependencies
+## 📸 Screenshots  
 
-Tested on Python 3.12.7 with the following packages:
-  - Jupyter v1.1.1
-  - Streamlit v1.46.1
-  - Seaborn v0.13.2
-  - Plotly v6.2.0
-  - Scikit-Learn v1.7.0
-  - shap v0.48.0
+### Dashboard Page  
+![Dashboard Screenshot](assets/dashboard.png)  
+
+### About Page  
+![About Screenshot](assets/about.png)  
+
+
+---
+
+## 🚀 How to Run Locally  
+1. Clone this repository and navigate to the folder:  
+   ```bash
+   git clone <your-repo-url>
+   cd PROHI-starting-repo
+ 
 
 ## Contributors
 
-_Add the project's authors, contact information, and links to websites or portfolios._
+_Pratibha Rustogi
