@@ -18,7 +18,8 @@ data = pd.DataFrame({
     "Values": np.random.randint(0, 100, 5)
 })
 st.dataframe(data)
- Bar chart
+
+# Bar chart
 st.header("Bar Chart")
 st.bar_chart(data.set_index("Category"))
 
