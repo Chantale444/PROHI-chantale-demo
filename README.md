@@ -1,6 +1,7 @@
 # PROHI Dashboard Example
 
-**Author**: [Pratibha Rustogi]
+**Author**: [CHantale NZeggeMvele
+#I changed authors name to mine as required in individual assignment 1]
 <!-- As main author, do not write anything in the line below.
 The collaborator will edit the line below in GitHub -->
 **Collaborator**: Anna Larsson
