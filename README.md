@@ -7,37 +7,31 @@ The collaborator will edit the line below in GitHub -->
 
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
-_Here you can include images, like the logo from SU_
-Am modifying line 11 since I want to have 2 comits for my work
-![Your dashboard](./assets/project-logo.jpg)
+## Screenshots
+
+### Dashboard Page
+![Dashboard Screenshot](./assets/dashboard.png)
+
+### About Page
+![About Screenshot](./assets/about.png)
+
+
 
 ## Introduction
 
-_This template project will contain a simple interactive web dashboard with Streamlit. Feel free to edit this document as desired_
+_This template project contains  a simple interactive web dashboard with Streamlit.The page contains  three elements for Input widgets (age, name and categortý one element for Data (a synthetic table created using nump py and finally a bar chart. The second page named About.py contains informtaion about the project I did during the data science course last semester.A screen shot of both pages has been uploaded above and three different commits. One was written during the coding of the dashboard, one during coding of About file and the last one after editing the README file.
 
 ## System description
 
 ### Installation of libraries
+The libraries were installed and the environment created in VSCode before coding. I install the environemnt from the project folder using a new command in terminal.
 
-Run the commands below in a terminal to configure the project and install the package dependencies for the first time.
-
-If you are using Mac, you may need to install Xcode. Check the official Streamlit documentation [here](https://docs.streamlit.io/get-started/installation/command-line#prerequisites).
-
-1. Create the environment with `python -m venv env`
-2. Activate the virtual environment for Python
-   - [Linux/Mac] `source env/bin/activate` 
-   - [Windows command prompt] `.\env\Scripts\activate.bat` 
-   - [in Windows PowerShell] `.\env\Scripts\Activate.ps1`
-3. Make sure that your terminal is in the environment (`env`) not in the global Python installation. The terminal should start with the word `env`
-4. Install required packages `pip install -r ./requirements.txt`
-5. Check that the installation works running `streamlit hello`
-6. Stop the terminal by pressing **Ctrl+C**
 
 ### Execute custom Dashboard
 
-First, make sure that you are running Python from the environment. Check the steps 2 and 3 above. Then, to run the custom dashboard execute the following command:
+Everytime I logg into  VSCode I make sure that you are running Python from the environment. TThe following code is used to run the custom dashboard:
 
-```
+
 > streamlit run Dashboard.py
 # If the command above fails, use:
 > python -m streamlit run Dashboard.py
@@ -55,4 +49,4 @@ Tested on Python 3.12.7 with the following packages:
 
 ## Contributors
 
-_Add the project's authors, contact information, and links to websites or portfolios._
+Chantale NzeggeMvele. Karolinka Institure, department od Health Informatics.
